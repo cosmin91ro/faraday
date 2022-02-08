@@ -13,7 +13,9 @@ services:
     restart: unless-stopped
 
   server:
-    build: ./Docker/faraday-server
+    build: 
+      context: ./
+      dockerfile: ./Docker/faraday-server/Dockerfile
     image: cosmin91ro/faraday-server:3.19
     ports:
       - "5985:5985"

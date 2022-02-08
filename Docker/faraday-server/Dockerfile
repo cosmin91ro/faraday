@@ -5,15 +5,15 @@ RUN apt update && apt install -y git python3-pip libpq-dev python3-dev
 
 # Clone faraday git repository
 WORKDIR /root
-RUN git clone https://github.com/infobyte/faraday.git
-WORKDIR /root/faraday
-RUN git clone https://github.com/infobyte/faraday_angular_frontend.git faraday/frontend
+RUN mkdir faraday
+COPY ./ /root/faraday/
 
 # Install the server's python dependencies
+WORKDIR /root/faraday
 RUN pip install .
 RUN apt install -y python2
 
-COPY ./run-faraday-server.py /root/run-faraday-server.py
+COPY ./Docker/faraday-server/run-faraday-server.py /root/run-faraday-server.py
 
 RUN echo alias python=python3 >> /root/.profile
 RUN mkdir -p /root/.faraday/config && mkdir -p /root/.faraday/logs

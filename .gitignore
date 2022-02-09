@@ -80,3 +80,6 @@ reports/executive/outputs/scope.docx
 _install
 faraday_plugins/
 faraday/frontend/
+
+.env
+venv

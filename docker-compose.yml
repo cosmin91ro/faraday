@@ -17,6 +17,7 @@ services:
       context: ./
       dockerfile: ./Docker/faraday-server/Dockerfile
     image: cosmin91ro/faraday-server:3.19
+    hostname: faraday.server
     ports:
       - "5985:5985"
     volumes:

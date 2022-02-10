@@ -19,28 +19,16 @@ To read about the latest features check out the [release notes](https://github.c
 
 # Installation
 
-Refer to the [releases page](https://github.com/infobyte/faraday/releases) for the latest pre-made installers for all supported operating systems.
-
-Check out our documentation for detailed information on how to install Faraday in all of our supported platforms
-
 ### Install from repo
 ```shell
 $ pip install virtualenv
 $ virtualenv faraday_venv
 $ source faraday_venv/bin/activate
-$ git clone git@github.com:infobyte/faraday.git
+$ git clone git@github.com:cosmin91ro/faraday.git
 $ cd faraday
-$ git clone https://github.com/infobyte/faraday_angular_frontend.git faraday/frontend
+$ git clone https://github.com/cosmin91ro/faraday_angular_frontend.git faraday/frontend
 $ pip install .
 ```
-
-For more information about the installation, check out our [Installation Wiki](https://github.com/infobyte/faraday/wiki/Install-Guide).
-
-## Development
-
-If you want to develop for Faraday, please follow our [development setup for linux](https://github.com/infobyte/faraday/wiki/Development-setup) or [development setup for OSX](https://github.com/infobyte/faraday/wiki/Development-Installation-OSX).
-
-## Quickstart
 
 Once you installed faraday packages, you will need to initialize the faraday database:
 
@@ -56,13 +44,16 @@ Now you can start the server with:
 $ sudo systemctl start faraday-server
 ```
 
+### Docker
+An easier way is to use Docker:
+```shell
+$ git clone git@github.com:cosmin91ro/faraday.git
+$ cd faraday
+$ docker-compose --env-file <path_to_env_variables_file> up -d
+```
+
 In your browser, now you can go to localhost:5985 and login with "faraday" as username, and the password generated in the initdb step.
 
-
-## New Features!
-
-All of Faraday's latest features and updates are always available on our [blog](https://medium.com/faraday).
-There are new entries every few weeks, don't forget to check out our amazing new improvements on its latest entry!
 
 ## API
 

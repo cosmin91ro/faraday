@@ -18,6 +18,7 @@ COPY ./Docker/faraday-server/run-faraday-server.py /root/run-faraday-server.py
 RUN echo alias python=python3 >> /root/.profile
 RUN mkdir -p /root/.faraday/config && mkdir -p /root/.faraday/logs
 RUN touch /root/.faraday/config/server.ini
+RUN pip install itsdangerous==1.1.0
 
 CMD python2 /root/run-faraday-server.py \
     --faraday-root /root/faraday/faraday \

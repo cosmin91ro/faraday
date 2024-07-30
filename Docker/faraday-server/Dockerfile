@@ -28,7 +28,7 @@ CMD python2 /root/run-faraday-server.py \
     --pg-user $PGSQL_USER \
     --pg-pass $PGSQL_PASSWD \
     --pg-db $PGSQL_DBNAME \
-    --pg-host db \
+    --pg-host $PGSQL_HOST \
     --su-mail $FARADAY_SUPERUSER_EMAIL \
     --su-name $FARADAY_SUPERUSER_NAME \
     --su-pass $FARADAY_SUPERUSER_PASSWORD

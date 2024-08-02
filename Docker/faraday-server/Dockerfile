@@ -10,7 +10,7 @@ COPY ./ /root/faraday/
 
 # Install the server's python dependencies
 WORKDIR /root/faraday
-RUN git clone https://github.com/cosmin91ro/faraday_angular_frontend.git faraday/frontend
+RUN git clone https://github.com/cwavesoftware/faraday_angular_frontend.git faraday/frontend
 RUN pip install .
 RUN apt install -y python2
 

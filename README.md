@@ -24,9 +24,9 @@ To read about the latest features check out the [release notes](https://github.c
 $ pip install virtualenv
 $ virtualenv faraday_venv
 $ source faraday_venv/bin/activate
-$ git clone git@github.com:cosmin91ro/faraday.git
+$ git clone git@github.com:cwavesoftware/faraday.git
 $ cd faraday
-$ git clone https://github.com/cosmin91ro/faraday_angular_frontend.git faraday/frontend
+$ git clone git@github.com/cwavesoftware/faraday_angular_frontend.git faraday/frontend
 $ pip install .
 ```
 
@@ -47,7 +47,7 @@ $ sudo systemctl start faraday-server
 ### Docker
 An easier way is to use Docker:
 ```shell
-$ git clone git@github.com:cosmin91ro/faraday.git
+$ git clone git@github.com:cwavesoftware/faraday.git
 $ cd faraday
 $ docker-compose --env-file <path_to_env_variables_file> up -d
 ```
